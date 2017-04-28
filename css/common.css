@@ -1,0 +1,104 @@
+#wrap{
+	width:800px;
+	position: absolute;
+	margin-left: 20%;
+	top: 0px;
+}
+.suffer{
+	width: 200px;
+	height:10px;
+	background: white;
+	position: relative;
+	border: solid;
+}
+#user{
+	width:200px;
+	z-index: 5;
+}
+#userlogin{
+	float: left;
+	z-index: 11555;
+}
+#user h2{
+	line-height: 20px;
+}
+#user a{
+	font-size: 14px;
+	color: red;
+	text-decoration: none;
+	
+}
+#user p{
+	height: 10px;
+	line-height: 20px;
+}
+.sufferbar{
+	width: 200px;
+	height:10px;
+	background: white;
+	position: relative;
+	border: solid;
+	margin-top: 15%;
+}
+#users{
+	width:205px;
+	height: 70px;
+	position: relative;
+	left: 80%;
+	top: -70px;
+}
+nav{
+	width:800px;
+	height: 70px;
+	background: #ccc;
+	position: relative;
+	top: 0px;
+	float: left;
+	margin-bottom: 0px;
+}
+nav li{
+	float: left;
+	list-style: none;
+	display: block;
+	margin-left: 20px;
+	height: 70px;
+	line-height: 70px;
+}
+nav li a{
+	text-decoration: none;
+	color: white;
+	background: black;
+	display: block;
+	height: 65px;
+	padding: 0px 20px;
+	line-height: 70px;
+	border: solid 1px black;
+	border-radius: 20%;
+}
+nav li a:hover{
+	height: 70px;
+	padding: 10px 30px;
+	line-height: 70px;
+	box-shadow: 5px 10px 5px #555;
+}
+nav dd{
+	text-decoration: none;
+	color: blue;
+	font-size: 16px;
+	line-height: 70px;
+	margin-top: 20px;
+	font-weight: bolder;
+}
+.add{
+	background: #aaa;
+	border-radius: 50%;
+	color: red;
+	font-weight: bolder;
+	margin-right: 15px;
+}
+.add:hover{
+	height: 68px;
+	padding: 10px 30px;
+	line-height: 70px;
+	margin-right: 0px;
+}

@@ -1,0 +1,17 @@
+$(document).ready(function(){
+	$("#userlogin").on("click",function(){
+		//$("#user").toggle();
+		//$("#backcolor").toggle();
+		if($('#user').css('display')=='none'){
+			$('#user').css({'display':'block',
+							'width':'200px',
+							'height':'70px'
+			});
+		}else{
+			$('#user').css({'display':'none',
+							'width':'200px',
+							'height':'0px'
+			});
+		}
+	});
+});

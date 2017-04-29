@@ -1,0 +1,9 @@
+#article{
+	width: 800px;
+	position: relative;
+	top: 80px;
+	left: 20%;
+}
+#wrap{
+	margin-bottom:80px;
+}

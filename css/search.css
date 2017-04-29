@@ -1,0 +1,14 @@
+#searchdiv{
+	position: absolute;
+	top: 80px;
+	width: 800px;
+}
+#searchdiv table{
+	position: relative;
+	left: 40%;
+}
+tr td{
+	line-height: 20px;
+	height: 20px;
+	overflow: hidden;
+}

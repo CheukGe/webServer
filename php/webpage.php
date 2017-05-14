@@ -59,7 +59,7 @@ span{
             <form action="./search.php" method="get"><input name="key" type="text" size="25" placeholder="搜索站内网站"><input type="submit" value="search" ></form>
 			</li>
 			<li><a href="./add.php" class="add">献文</a></li>
-			<dd>为世界展示你的学识！</dd>
+			<dd>这只是个</dd>
 		</nav>
 			<div id="users">
 					<img src="<?php echo $path?>" width=70px height=70px id="userlogin" />
@@ -136,14 +136,6 @@ span{
 			$end = $total_pages;
 			}
 			}
-								/*for($i=$start;$i<=$end;$i++){
-								if($total_pages == $i){
-								$page_banner .= "<font href='" .$_SERVER['PHP_SELF']."?p=".$i."'>{$i}</font>";
-								}else{
-								$page_banner .= "<a href='" .$_SERVER['PHP_SELF']."?p=".$i."'>{$i}</a>";
-								}
-								}*/
-			//for($i=$start;$i<$end;$i++){}
 			if($page<$total_pages){
 			if($total_pages>$showpage&&$total_pages>$total_pages+$pageoffset){
 			$page_banner .="...";

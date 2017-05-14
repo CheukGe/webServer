@@ -48,7 +48,7 @@ textarea{
             <form action="./search.php" method="get"><input name="searchtext" type="text" size="25" placeholder="搜索站内网站"><input name="search" type="submit" value="search" ></form>
       </li>
       <li><a href="./add.php" class="add">献文</a></li>
-      <dd>为世界展示你的学识！</dd>
+      <dd>这只是个标题！</dd>
     </nav>
       <div id="users">
           <img src="<?php echo $path?>" width=70px height=70px id="userlogin" />

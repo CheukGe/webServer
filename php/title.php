@@ -2,7 +2,6 @@
 require('./connect.php');
 $username = $_COOKIE['username'];
 $password = $_COOKIE['password'];
-$id = $_GET['id'];
 $sql = mysql_query("select * from user where username='" ."$username"."' or email='" ."$username"."'");
 if($result = mysql_fetch_assoc($sql)){
 	$path = $result['picture'];
@@ -10,9 +9,10 @@ if($result = mysql_fetch_assoc($sql)){
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta charset="utf-8">
+	<title>首页</title>
 	<link rel="stylesheet" type="text/css" href="../css/webpage.css">
-	<link rel="stylesheet" type="text/css" href="../css/info.css">
+	<link rel="stylesheet" type="text/css" href="../css/webpage_1.css">
 	<script src="../js/jq.js"></script>
 	<style>
 		@keyframes suffer{
@@ -24,6 +24,23 @@ if($result = mysql_fetch_assoc($sql)){
 		width:<?php echo $result['suffer']?>px;
 		}
 	}
+		@keyframes statusno{
+			from{
+				opacity:1;
+				z-index: 9999;
+				display: block;
+			}to{
+				opacity: 0;
+				display: none;
+			}
+		}
+		.suffer{
+			position: absolute;
+			top:80px;
+			left:40%;
+			animation: statusno 2s 1;
+			animation-fill-mode:forwards; 
+		}
 span{
 	height: 10px;
 	background: red;
@@ -35,14 +52,14 @@ span{
 	</style>
 </head>
 <body>
-<div id="wrap">
+	<div id="wrap">
 		<nav>
 			<li><a href="./webpage.php" class="index">首页</a></li>
 			<li>
             <form action="./search.php" method="get"><input name="key" type="text" size="25" placeholder="搜索站内网站"><input type="submit" value="search" ></form>
 			</li>
 			<li><a href="./add.php" class="add">献文</a></li>
-			<dd>这只是个标题！</dd>
+			<dd>这只是个标题</dd>
 		</nav>
 			<div id="users">
 					<img src="<?php echo $path?>" width=70px height=70px id="userlogin" />
@@ -59,32 +76,9 @@ span{
 					</div>
 				</div>
 			  </div>
-			  </div>
-			  <div id="article">
-					<?php
-						$data = mysql_query("select * from article where id = $id");
-						if($row = mysql_fetch_assoc($data)){
-							$str = $row['body'];
-							$str = str_replace("\n","<br>",$str);
-							echo $str;
-						$upid = mysql_query("SELECT id FROM article WHERE ID<$id ORDER BY id DESC");
-						$nextid = mysql_query("SELECT id FROM article WHERE ID>$id ORDER BY id ASC");
-						$uppage = mysql_fetch_array($upid);
-						$nextpage = mysql_fetch_array($nextid);
-						echo $uppage['0'];
-
-					?>
-					<div>
-				<a href="info.php?id=<?php echo $uppage['0'];}?>">上一页</a>
-				<a href="info.php?id=<?php echo $nextpage['0'];}?>">下一页</a>
-			  </div>
-			  </div>
-
-			  
-</body>
-</html>
-<script src="../js/webpage.js"></script>
-<?php
-
-mysql_close($con);
-?>
+			<div class="suffer" id="sufferflash">
+						<p>你共得到了<?php echo $result['suffer']?>经验</p>
+						<span style="width: <?php echo $result['suffer']?>px"></span>
+			</div>
+	
+</div>
